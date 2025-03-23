@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="孙桐的博客 - 分享技术经验和行业见解">
+    <meta name="keywords" content="孙桐, 博客, 技术, 开发, 前端, 后端">
+    <title>孙桐的博客</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .blog-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .blog-header p {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+        }
+        
+        .blog-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        .blog-card {
+            margin-bottom: 0;
+        }
+        
+        .back-home {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            gap: 10px;
+        }
+        
+        .category-btn {
+            padding: 8px 15px;
+            background-color: var(--light-color);
+            border-radius: 30px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .category-btn:hover,
+        .category-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .search-container {
+            max-width: 500px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 12px 20px;
+            padding-right: 50px;
+            border-radius: 30px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        
+        .search-btn {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <header style="padding: 30px 0;">
+        <div class="container">
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+                <em><i class="fas fa-moon"></i></em>
+            </div>
+            <h1>孙桐的博客</h1>
+            <p>分享技术见解和行业经验</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="index.html#about">关于我</a></li>
+                <li><a href="index.html#projects">项目</a></li>
+                <li><a href="#" class="active">博客</a></li>
+                <li><a href="index.html#contact">联系方式</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container blog-container">
+            <div class="blog-header">
+                <h1>我的技术博客</h1>
+                <p>记录学习和工作中的点滴，分享技术见解和项目经验</p>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="搜索文章...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="categories">
+                <div class="category-btn active">全部</div>
+                <div class="category-btn">前端开发</div>
+                <div class="category-btn">后端技术</div>
+                <div class="category-btn">工具技巧</div>
+                <div class="category-btn">项目管理</div>
+                <div class="category-btn">职业发展</div>
+            </div>
+            
+            <div class="blog-list">
+                <article class="blog-card">
+                    <div class="blog-header">
+                        <span class="blog-category">前端开发</span>
+                        <span class="blog-date">2023年9月15日</span>
+                    </div>
+                    <h3>React 18新特性详解</h3>
+                    <p>本文详细介绍了React 18中的Concurrent Mode、自动批处理和Suspense等新特性，以及如何在项目中有效利用这些功能来提升应用性能和用户体验。我们将通过具体的代码示例和性能对比，帮助你理解如何迁移现有应用并充分利用这些新功能。</p>
+                    <a href="#" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-header">
+                        <span class="blog-category">后端技术</span>
+                        <span class="blog-date">2023年8月22日</span>
+                    </div>
+                    <h3>微服务架构最佳实践</h3>
+                    <p>基于多年实践经验，本文分享了微服务架构设计中的关键决策点、常见陷阱以及如何确保系统弹性和可扩展性。我们会分析服务拆分的粒度、通信模式的选择、数据一致性的处理，以及如何处理分布式系统中的故障和延迟。同时也会探讨DevOps和监控策略对微服务成功的重要性。</p>
+                    <a href="#" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-header">
+                        <span class="blog-category">工具技巧</span>
+                        <span class="blog-date">2023年7月10日</span>
+                    </div>
+                    <h3>10个提高开发效率的VSCode插件</h3>
+                    <p>这篇文章推荐了10个能显著提高日常开发效率的VSCode插件，包括代码补全、错误检测、Git集成和主题美化等多方面。每个插件我们都会介绍其核心功能、安装方法、常用快捷键以及个性化配置选项，帮助你打造一个更高效的开发环境。</p>
+                    <a href="#" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-header">
+                        <span class="blog-category">项目管理</span>
+                        <span class="blog-date">2023年6月18日</span>
+                    </div>
+                    <h3>敏捷开发中的常见误区及解决方案</h3>
+                    <p>许多团队在实施敏捷开发时会遇到各种挑战和误区。本文基于实际经验，剖析了敏捷开发中常见的10个误区，如形式主义的站会、缺乏适当的产品待办列表管理、忽视技术债务等，并提供了实用的解决方案和最佳实践，帮助团队真正理解和应用敏捷原则。</p>
+                    <a href="#" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-header">
+                        <span class="blog-category">前端开发</span>
+                        <span class="blog-date">2023年5月25日</span>
+                    </div>
+                    <h3>CSS Grid布局的高级应用</h3>
+                    <p>CSS Grid是现代网页布局的强大工具，本文深入探讨了Grid布局的高级应用场景，包括响应式图片画廊、复杂的仪表盘界面、不规则布局等。我们将通过详细的代码示例和实际案例，展示如何结合Grid和Flexbox创建既美观又功能强大的用户界面。</p>
+                    <a href="#" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-header">
+                        <span class="blog-category">职业发展</span>
+                        <span class="blog-date">2023年4月12日</span>
+                    </div>
+                    <h3>从初级到高级开发者的成长路径</h3>
+                    <p>本文分享了我从初级开发者成长为高级工程师的经验和教训。我们将讨论技术能力提升、软技能培养、项目管理经验的积累，以及如何主动承担责任和寻求反馈。文章还包括一份详细的技能清单和学习资源推荐，帮助你规划自己的职业发展路径。</p>
+                    <a href="#" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                </article>
+            </div>
+            
+            <div class="back-home">
+                <a href="index.html" class="btn">返回首页</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3>孙桐</h3>
+                    <p>开发者 / 工程师 / 创造者</p>
+                </div>
+                <div class="footer-right">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> 孙桐. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // 博客分类切换
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // 移除所有活动类
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                
+                // 给当前按钮添加活动类
+                this.classList.add('active');
+                
+                // 这里可以添加筛选逻辑
+                const category = this.textContent;
+                // 在实际应用中，可以根据类别筛选文章
+            });
+        });
+        
+        // 搜索功能
+        const searchInput = document.querySelector('.search-input');
+        const searchBtn = document.querySelector('.search-btn');
+        
+        searchBtn.addEventListener('click', function() {
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            if (searchTerm) {
+                // 在实际应用中，这里可以实现搜索逻辑
+                alert(`正在搜索: ${searchTerm}`);
+            }
+        });
+        
+        // 回车搜索
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchBtn.click();
+            }
+        });
+    </script>
+</body>
+</html> 
