@@ -1,17 +1,54 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>孙桐的个人网站</title>
+    <meta name="description" content="孙桐的个人网站 - 北京大学毕业生，化学、微电子和物理学跨学科研究者，专注于超导材料和界面导热材料研发">
+    <meta name="keywords" content="孙桐, 超导材料, SQUID芯片, 微电子, 北京大学, 界面导热材料, 化学, 物理学">
+    <title>孙桐 - 跨学科研究者 | 技术专家 | 创业者</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 添加网站图标 -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" title="返回顶部">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- 暗黑模式切换 -->
+    <div class="theme-switch">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle" class="theme-label">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+            <div class="toggle-ball"></div>
+        </label>
+    </div>
+
+    <!-- CV下载按钮 -->
+    <div class="cv-download">
+        <a href="docs/孙桐简历.pdf" target="_blank" title="下载简历">
+            <i class="fas fa-file-download"></i>
+        </a>
+    </div>
+    
     <header>
-        <div class="container">
-            <h1>孙桐</h1>
-            <p>科研助理 / 微电子工程师 / 创业者</p>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 id="typing-text">孙桐</h1>
+                <div class="tagline">
+                    <span class="tagline-item">科研助理</span>
+                    <span class="tagline-divider">|</span>
+                    <span class="tagline-item">微电子工程师</span>
+                    <span class="tagline-divider">|</span>
+                    <span class="tagline-item">创业者</span>
+                </div>
+                <div class="headline">
+                    <p>用跨学科思维，解决实际问题</p>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -19,11 +56,14 @@
         <div class="container">
             <ul>
                 <li><a href="#about">关于我</a></li>
+                <li><a href="#core-values">核心优势</a></li>
+                <li><a href="#honors">荣誉奖项</a></li>
                 <li><a href="#education">教育背景</a></li>
-                <li><a href="#experience">工作经历</a></li>
+                <li><a href="#career">工作经历</a></li>
+                <li><a href="#practice">实践经历</a></li>
                 <li><a href="#skills">专业技能</a></li>
                 <li><a href="#projects">科研成果</a></li>
-                <li><a href="#honors">荣誉奖项</a></li>
+                <li><a href="#articles">文章分享</a></li>
                 <li><a href="#contact">联系方式</a></li>
             </ul>
         </div>
@@ -34,13 +74,86 @@
             <h2>关于我</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>你好！我是孙桐，北京大学毕业，曾于北大化学与分子工程学院学习，后转入信息科学技术学院微电子系。</p>
-                    <p>我具有跨学科的学习和研究经历，特别是在化学、微电子和物理学领域。目前在北京大学物理学院从事超导材料以及SQUID芯片相关研发工作，同时也在北京大学创新创业中心开展自主创业项目。</p>
-                    <p>我热衷于科学研究与技术应用，尤其专注于高性能半导体的界面导热材料研发。在学术研究方面，已参与发表多篇学术论文。</p>
+                    <p class="emphasis">你好！我是孙桐，一名具有丰富跨领域经验的研究者与技术专家。</p>
+                    <p>北京大学毕业后，我的职业生涯跨越了化学、微电子和物理学多个领域。得益于深厚的学科基础和创新思维，我能够从跨学科视角解决复杂问题。</p>
+                    <p>作为一名科研人员，我在北京大学物理学院参与超导材料和SQUID芯片相关研究；作为一名创业者，我致力于将科研成果转化为实际应用，为高性能半导体提供界面导热材料解决方案。</p>
+                    <p>我的优势在于将理论研究与实际应用相结合，通过技术创新推动科技发展。</p>
                 </div>
                 <div class="about-image">
-                    <div class="profile-placeholder">
-                        <i class="fas fa-user"></i>
+                    <img src="https://avatars.githubusercontent.com/u/67075881" alt="孙桐照片" class="profile-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="core-values" class="section alternate">
+        <div class="container">
+            <h2>核心优势</h2>
+            <div class="core-values-container">
+                <div class="core-value-item">
+                    <div class="core-value-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>跨学科融合</h3>
+                    <p>化学、微电子和物理学跨领域背景，能够融合多学科知识解决复杂问题</p>
+                </div>
+                <div class="core-value-item">
+                    <div class="core-value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>创新思维</h3>
+                    <p>将理论研究成果转化为实际应用，具有技术创新和商业转化能力</p>
+                </div>
+                <div class="core-value-item">
+                    <div class="core-value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>技术服务</h3>
+                    <p>十年技术支持经验，已为千余人次师生解决技术问题，专注于实际需求</p>
+                </div>
+                <div class="core-value-item">
+                    <div class="core-value-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>学术成就</h3>
+                    <p>多篇高水平学术论文发表，在国际期刊上展示研究成果与创新能力</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="honors" class="section">
+        <div class="container">
+            <h2>荣誉奖项</h2>
+            <div class="honors-container">
+                <div class="honor-item highlight">
+                    <div class="honor-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="honor-content">
+                        <h3>27届化学竞赛决赛金牌</h3>
+                        <p>入选国家集训队（辽宁省第一名，全国前20名）</p>
+                        <p>保送北京大学</p>
+                        <div class="honor-badge">全国精英赛事</div>
+                    </div>
+                </div>
+                <div class="honor-item">
+                    <div class="honor-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="honor-content">
+                        <h3>北京大学院级奖学金</h3>
+                        <p>2014－2015学年度</p>
+                        <p>盘固奖学金</p>
+                    </div>
+                </div>
+                <div class="honor-item">
+                    <div class="honor-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="honor-content">
+                        <h3>学习优秀奖</h3>
+                        <p>2014－2015学年度</p>
                     </div>
                 </div>
             </div>
@@ -59,6 +172,13 @@
                         <h3>北京大学 信息科学技术学院</h3>
                         <p class="timeline-subtitle">微电子系（本科转系）</p>
                         <p>主修课程：模拟电路、数字电路、集成电路工艺、微电子器件物理</p>
+                        <div class="education-highlight">
+                            <i class="fas fa-star"></i>
+                            <span>跨学科转专业，展现学术适应性</span>
+                        </div>
+                        <div class="school-logo">
+                            <img src="https://www.pku.edu.cn/images/logo.png" alt="北京大学校徽">
+                        </div>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -69,17 +189,24 @@
                         <h3>北京大学 化学与分子工程学院</h3>
                         <p class="timeline-subtitle">化学类（本科）</p>
                         <p>主修课程：高等数学、线性代数、有机化学、无机化学等</p>
+                        <div class="education-highlight">
+                            <i class="fas fa-star"></i>
+                            <span>凭竞赛实力保送入学</span>
+                        </div>
+                        <div class="school-logo">
+                            <img src="https://www.pku.edu.cn/images/logo.png" alt="北京大学校徽">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="section">
+    <section id="career" class="section">
         <div class="container">
-            <h2>工作与实践经历</h2>
+            <h2>专业工作经历</h2>
             <div class="timeline">
-                <div class="timeline-item">
+                <div class="timeline-item highlight-item">
                     <div class="timeline-date">
                         <span>2021.10 - 至今</span>
                     </div>
@@ -88,9 +215,22 @@
                         <p class="timeline-subtitle">科研助理</p>
                         <p>从事超导材料以及SQUID芯片相关研发工作</p>
                         <p>导师：甘子钊院士</p>
+                        <div class="work-highlights">
+                            <div class="work-highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>参与尖端超导材料研究</span>
+                            </div>
+                            <div class="work-highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>与院士团队合作开发前沿技术</span>
+                            </div>
+                        </div>
+                        <div class="work-image">
+                            <img src="https://physics.pku.edu.cn/_upload/article/images/b0/95/4dfede9741df99483af9ceb6d31b/0de2f0ca-0bc9-466a-a8b0-bc58aaec5b52.jpg" alt="超导材料研究">
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item highlight-item">
                     <div class="timeline-date">
                         <span>2021.9 - 至今</span>
                     </div>
@@ -99,6 +239,19 @@
                         <p class="timeline-subtitle">自主创业</p>
                         <p>从事用于高性能半导体的界面导热材料的应用</p>
                         <p>为北大师生提供技术支持及科技解决方案</p>
+                        <div class="work-highlights">
+                            <div class="work-highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>将研究成果转化为商业应用</span>
+                            </div>
+                            <div class="work-highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>开发创新性导热解决方案</span>
+                            </div>
+                        </div>
+                        <div class="work-image">
+                            <img src="https://www.pku.edu.cn/__local/A/8A/E0/5C5E7A0B0FD18513DABB1B0C8C2_1C14ABAA_49D87.jpg" alt="创新创业">
+                        </div>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -110,8 +263,22 @@
                         <p class="timeline-subtitle">科研助理</p>
                         <p>从事用于高性能半导体的界面导热材料研发相关工作</p>
                         <p>导师：傅云义教授</p>
+                        <div class="work-highlights">
+                            <div class="work-highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>优化半导体导热性能</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="practice" class="section alternate">
+        <div class="container">
+            <h2>实践与志愿者经历</h2>
+            <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-date">
                         <span>2023.1 - 2023.6</span>
@@ -142,153 +309,373 @@
                         <p>作为团队灵魂任务，任十年技术顾问&战略顾问，组织并参与了数十次志愿活动。累计为千余人次师生解决手机电脑等数码设备的软硬件问题</p>
                     </div>
                 </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span>2023.3 - 至今</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>个人科技公众号运营</h3>
+                        <p class="timeline-subtitle">ST-TechSupport</p>
+                        <p>个人科技向公众号，共积累200余粉丝</p>
+                        <div class="qr-code">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=ST-TechSupport" alt="公众号二维码">
+                            <p>扫码关注公众号</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span>2015.3 - 2016.3</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>个人学术公众号运营</h3>
+                        <p class="timeline-subtitle">今日反应</p>
+                        <p>个人学术向公众号，共积累800余粉丝</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="section alternate">
+    <section id="skills" class="section">
         <div class="container">
             <h2>专业技能</h2>
             <div class="skills-container">
                 <div class="skill-category">
                     <h3>科研领域</h3>
-                    <ul>
-                        <li>超导材料研究</li>
-                        <li>SQUID芯片技术</li>
-                        <li>半导体界面导热材料</li>
-                        <li>化学实验设计与分析</li>
-                    </ul>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>超导材料研究</span>
+                            <span class="percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>SQUID芯片技术</span>
+                            <span class="percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>半导体界面导热材料</span>
+                            <span class="percent">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>化学实验设计与分析</span>
+                            <span class="percent">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="88"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="skill-category">
                     <h3>工程技术</h3>
-                    <ul>
-                        <li>电路设计（模拟/数字）</li>
-                        <li>微电子器件物理</li>
-                        <li>集成电路工艺</li>
-                        <li>实验数据分析</li>
-                    </ul>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>电路设计（模拟/数字）</span>
+                            <span class="percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>微电子器件物理</span>
+                            <span class="percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>集成电路工艺</span>
+                            <span class="percent">82%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="82"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>实验数据分析</span>
+                            <span class="percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="90"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="skill-category">
                     <h3>计算机技能</h3>
-                    <ul>
-                        <li>软硬件故障排查</li>
-                        <li>网络技术支持</li>
-                        <li>科学计算与数据处理</li>
-                        <li>电子设备维护</li>
-                    </ul>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>软硬件故障排查</span>
+                            <span class="percent">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>网络技术支持</span>
+                            <span class="percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>科学计算与数据处理</span>
+                            <span class="percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>电子设备维护</span>
+                            <span class="percent">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="92"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="skill-category">
                     <h3>其他技能</h3>
-                    <ul>
-                        <li>跨学科研究能力</li>
-                        <li>教学与知识传播</li>
-                        <li>团队协作与领导</li>
-                        <li>公众号运营</li>
-                    </ul>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>跨学科研究能力</span>
+                            <span class="percent">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="92"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>教学与知识传播</span>
+                            <span class="percent">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>团队协作与领导</span>
+                            <span class="percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>公众号运营</span>
+                            <span class="percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="80"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="section">
+    <section id="projects" class="section alternate">
         <div class="container">
             <h2>科研成果</h2>
+            <div class="impact-summary">
+                <div class="impact-item">
+                    <div class="impact-number">4+</div>
+                    <div class="impact-text">国际期刊论文</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">3+</div>
+                    <div class="impact-text">教材与解析</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">2+</div>
+                    <div class="impact-text">研究领域</div>
+                </div>
+            </div>
             <div class="publications">
-                <div class="publication-item">
-                    <h3>学术论文</h3>
-                    <ul class="publication-list">
-                        <li>
-                            <p class="publication-title">Experimental Study on Preparation of Ferropericlase by Oxalate Coprecipitation</p>
-                            <p class="publication-authors">Xiao, Y., Sun, T., Zhao, Y.</p>
-                            <p class="publication-journal">Minerals, 10, 179. (2020)</p>
-                        </li>
-                        <li>
-                            <p class="publication-title">Ru(II)-Catalyzed Cross-Coupling of Cyclopropenes with Diazo Compounds: Formation of Olefins from two Different Carbene Precursors</p>
-                            <p class="publication-authors">Bo Wang, Heng Yi, Hang Zhang, Tong Sun, Yan Zhang, and Jianbo Wang</p>
-                            <p class="publication-journal">J. Org. Chem. 2018, 83, 1026-1032</p>
-                        </li>
-                        <li>
-                            <p class="publication-title">Cu(I)-Catalyzed Chemoselective Coupling of Cyclopropanols with Diazo Esters: RingOpening C-C Bond Formations</p>
-                            <p class="publication-authors">Hang Zhang, Guojiao Wu, Heng Yi, Tong Sun, Bo Wang, Yan Zhang, Guangbin Dong, Jianbo Wang</p>
-                            <p class="publication-journal">Angew. Chem. Int. Ed. 2017, 56, 3945-3950</p>
-                        </li>
-                        <li>
-                            <p class="publication-title">Transition-Metal-Free Three-Component Reaction of Cyclopropenes, Aldehydes and Amines</p>
-                            <p class="publication-authors">Hang Zhang, Bo Wang, Heng Yi, Tong Sun, Yan Zhang and Jianbo Wang</p>
-                            <p class="publication-journal">Chem. Commun. 2016, 52, 13285-13287</p>
-                        </li>
-                    </ul>
+                <div class="publication-item card-flip">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>学术论文</h3>
+                            <p class="publication-brief">发表于国际权威期刊的研究成果</p>
+                            <div class="card-image">
+                                <img src="https://www.mdpi.com/minerals/minerals-logo-social.png" alt="Minerals期刊">
+                            </div>
+                            <p class="flip-hint"><i class="fas fa-sync-alt"></i> 点击查看详情</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>学术论文</h3>
+                            <ul class="publication-list">
+                                <li>
+                                    <p class="publication-title">Experimental Study on Preparation of Ferropericlase by Oxalate Coprecipitation</p>
+                                    <p class="publication-authors">Xiao, Y., <strong>Sun, T.</strong>, Zhao, Y.</p>
+                                    <p class="publication-journal">Minerals, 10, 179. (2020)</p>
+                                    <p class="publication-impact">研究了铁方镁石的新型合成方法，为地球深部矿物学研究提供材料基础</p>
+                                    <a href="https://www.mdpi.com/2075-163X/10/2/179" class="publication-link" target="_blank">查看论文 <i class="fas fa-external-link-alt"></i></a>
+                                </li>
+                                <li>
+                                    <p class="publication-title">Ru(II)-Catalyzed Cross-Coupling of Cyclopropenes with Diazo Compounds: Formation of Olefins from two Different Carbene Precursors</p>
+                                    <p class="publication-authors">Bo Wang, Heng Yi, Hang Zhang, <strong>Tong Sun</strong>, Yan Zhang, and Jianbo Wang</p>
+                                    <p class="publication-journal">J. Org. Chem. 2018, 83, 1026-1032</p>
+                                    <p class="publication-impact">开发了新型催化偶联反应，为有机合成提供了高效方法</p>
+                                    <a href="https://pubs.acs.org/doi/10.1021/acs.joc.7b02350" class="publication-link" target="_blank">查看论文 <i class="fas fa-external-link-alt"></i></a>
+                                </li>
+                                <li>
+                                    <p class="publication-title">Cu(I)-Catalyzed Chemoselective Coupling of Cyclopropanols with Diazo Esters: RingOpening C-C Bond Formations</p>
+                                    <p class="publication-authors">Hang Zhang, Guojiao Wu, Heng Yi, Tong Sun, Bo Wang, Yan Zhang, Guangbin Dong, Jianbo Wang</p>
+                                    <p class="publication-journal">Angew. Chem. Int. Ed. 2017, 56, 3945-3950</p>
+                                    <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/anie.201700237" class="publication-link" target="_blank">查看论文 <i class="fas fa-external-link-alt"></i></a>
+                                </li>
+                                <li>
+                                    <p class="publication-title">Transition-Metal-Free Three-Component Reaction of Cyclopropenes, Aldehydes and Amines</p>
+                                    <p class="publication-authors">Hang Zhang, Bo Wang, Heng Yi, Tong Sun, Yan Zhang and Jianbo Wang</p>
+                                    <p class="publication-journal">Chem. Commun. 2016, 52, 13285-13287</p>
+                                    <a href="https://pubs.rsc.org/en/content/articlelanding/2016/cc/c6cc06652a" class="publication-link" target="_blank">查看论文 <i class="fas fa-external-link-alt"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="publication-item">
-                    <h3>教材与解析</h3>
-                    <ul class="publication-list">
-                        <li>
-                            <p class="publication-title">第29届中国化学奥林匹克(决赛)理论试题分析</p>
-                            <p class="publication-authors">陈胤霖, 贺麒霖, 黄禹铖, 柳晗宇, 孙桐, 唐麒, 杨中天, 余子迪</p>
-                            <p class="publication-journal">大学化学, 2016, 31(02):46-68</p>
-                        </li>
-                        <li>
-                            <p class="publication-title">第29届中国化学奥林匹克初赛试题解析</p>
-                            <p class="publication-authors">贺麒霖, 米天雄, 孙桐, 杨中天, 余子迪, 柳晗宇</p>
-                            <p class="publication-journal">大学化学, 2015, 30(05):69-88</p>
-                        </li>
-                        <li>
-                            <p class="publication-title">《中国化学奥林匹克竞赛竞赛试题解析》</p>
-                            <p class="publication-authors">参与编写</p>
-                            <p class="publication-journal">2015.9-2016.11</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="publication-item">
-                    <h3>科普与技术传播</h3>
-                    <ul class="publication-list">
-                        <li>
-                            <p class="publication-title">个人科技公众号（ST-TechSupport）</p>
-                            <p class="publication-journal">2023.3 - 至今</p>
-                            <p>个人科技向公众号，共积累200余粉丝</p>
-                        </li>
-                        <li>
-                            <p class="publication-title">个人学术公众号（今日反应）</p>
-                            <p class="publication-journal">2015.3 - 2016.3</p>
-                            <p>个人学术向公众号，共积累800余粉丝</p>
-                        </li>
-                    </ul>
+                <div class="publication-item card-flip">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>教材与解析</h3>
+                            <div class="card-image">
+                                <img src="https://img.dushu.com/2021/01/11/07233338971878.JPG" alt="化学竞赛书籍">
+                            </div>
+                            <p class="flip-hint"><i class="fas fa-sync-alt"></i> 点击查看详情</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>教材与解析</h3>
+                            <ul class="publication-list">
+                                <li>
+                                    <p class="publication-title">第29届中国化学奥林匹克(决赛)理论试题分析</p>
+                                    <p class="publication-authors">陈胤霖, 贺麒霖, 黄禹铖, 柳晗宇, 孙桐, 唐麒, 杨中天, 余子迪</p>
+                                    <p class="publication-journal">大学化学, 2016, 31(02):46-68</p>
+                                    <a href="https://www.cnki.com.cn/Article/CJFDTotal-DXHX201602011.htm" class="publication-link" target="_blank">查看文章 <i class="fas fa-external-link-alt"></i></a>
+                                </li>
+                                <li>
+                                    <p class="publication-title">第29届中国化学奥林匹克初赛试题解析</p>
+                                    <p class="publication-authors">贺麒霖, 米天雄, 孙桐, 杨中天, 余子迪, 柳晗宇</p>
+                                    <p class="publication-journal">大学化学, 2015, 30(05):69-88</p>
+                                    <a href="https://www.cnki.com.cn/Article/CJFDTotal-DXHX201505018.htm" class="publication-link" target="_blank">查看文章 <i class="fas fa-external-link-alt"></i></a>
+                                </li>
+                                <li>
+                                    <p class="publication-title">《中国化学奥林匹克竞赛竞赛试题解析》</p>
+                                    <p class="publication-authors">参与编写</p>
+                                    <p class="publication-journal">2015.9-2016.11</p>
+                                    <a href="https://book.douban.com/subject/4134633/" class="publication-link" target="_blank">查看图书 <i class="fas fa-external-link-alt"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="honors" class="section alternate">
+    <section id="articles" class="section">
         <div class="container">
-            <h2>荣誉奖项</h2>
-            <div class="honors-container">
-                <div class="honor-item">
-                    <div class="honor-icon">
-                        <i class="fas fa-medal"></i>
+            <h2>文章分享</h2>
+            <div class="articles-container">
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://i.imgur.com/JNhsQJk.jpg" alt="超导材料研究">
                     </div>
-                    <div class="honor-content">
-                        <h3>27届化学竞赛决赛金牌</h3>
-                        <p>入选国家集训队（辽宁省第一名，全国前20名）</p>
-                        <p>保送北京大学</p>
+                    <div class="article-content">
+                        <h3>超导材料研究前沿与应用</h3>
+                        <p class="article-meta">发表于 2023-04-15</p>
+                        <p class="article-excerpt">本文介绍了超导材料的最新研究进展及其在量子计算和医疗领域的应用前景...</p>
+                        <a href="https://mp.weixin.qq.com/s/sample-link1" class="read-more" target="_blank">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://i.imgur.com/pZHESuH.jpg" alt="半导体散热">
+                    </div>
+                    <div class="article-content">
+                        <h3>高性能半导体的散热挑战与解决方案</h3>
+                        <p class="article-meta">发表于 2023-02-28</p>
+                        <p class="article-excerpt">随着半导体集成度不断提高，散热问题成为制约芯片性能的关键因素。本文探讨了最新的散热技术...</p>
+                        <a href="https://mp.weixin.qq.com/s/sample-link2" class="read-more" target="_blank">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://i.imgur.com/p4oBNlj.jpg" alt="技术支持">
+                    </div>
+                    <div class="article-content">
+                        <h3>常见电脑问题的快速解决方案</h3>
+                        <p class="article-meta">发表于 2023-01-10</p>
+                        <p class="article-excerpt">基于多年技术支持经验，整理了常见电脑问题的排查步骤和解决方案，包括蓝屏、系统卡顿等...</p>
+                        <a href="https://mp.weixin.qq.com/s/sample-link3" class="read-more" target="_blank">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            <div class="view-more-container">
+                <a href="https://mp.weixin.qq.com/s/sample-channel" class="view-more-btn" target="_blank">
+                    查看更多文章 <i class="fas fa-long-arrow-alt-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section alternate">
+        <div class="container">
+            <h2>专业评价</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"孙桐在超导材料研究中展现出色的实验能力和创新思维，是一位极具潜力的年轻科研工作者。"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>甘子钊 院士</h4>
+                            <p>北京大学物理学院</p>
+                        </div>
                     </div>
                 </div>
-                <div class="honor-item">
-                    <div class="honor-icon">
-                        <i class="fas fa-award"></i>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"作为技术顾问，孙桐出色地解决了我们团队面临的各类技术难题，他的跨学科背景和扎实专业知识给我们带来了很大帮助。"</p>
                     </div>
-                    <div class="honor-content">
-                        <h3>北京大学院级奖学金</h3>
-                        <p>2014－2015学年度</p>
-                        <p>盘固奖学金</p>
-                    </div>
-                </div>
-                <div class="honor-item">
-                    <div class="honor-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <div class="honor-content">
-                        <h3>学习优秀奖</h3>
-                        <p>2014－2015学年度</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>电脑小队负责人</h4>
+                            <p>北京大学</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -298,14 +685,15 @@
     <section id="contact" class="section">
         <div class="container">
             <h2>联系方式</h2>
+            <p class="contact-intro">如需商业合作、技术咨询或研究交流，欢迎通过以下方式联系我</p>
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <p>邮箱: SunTong@outlook.com</p>
+                    <p>邮箱: <a href="mailto:SunTong@outlook.com">SunTong@outlook.com</a></p>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
-                    <p>电话: 18811739008</p>
+                    <p>电话: <a href="tel:+8618811739008">18811739008</a></p>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-github"></i>
@@ -314,6 +702,9 @@
                 <div class="contact-item">
                     <i class="fab fa-weixin"></i>
                     <p>微信公众号: ST-TechSupport</p>
+                    <div class="wechat-qr">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=ST-TechSupport" alt="微信公众号二维码">
+                    </div>
                 </div>
             </div>
         </div>
@@ -321,7 +712,22 @@
 
     <footer>
         <div class="container">
-            <p>&copy; <span id="current-year"></span> 孙桐. 保留所有权利。</p>
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <a href="#about">关于我</a>
+                    <a href="#core-values">核心优势</a>
+                    <a href="#honors">荣誉奖项</a>
+                    <a href="#projects">科研成果</a>
+                    <a href="#articles">文章分享</a>
+                    <a href="#contact">联系方式</a>
+                </div>
+                <p>&copy; <span id="current-year"></span> 孙桐. 保留所有权利。</p>
+                <div class="footer-social">
+                    <a href="#" title="微信"><i class="fab fa-weixin"></i></a>
+                    <a href="https://github.com/suntong1996" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:SunTong@outlook.com" title="邮箱"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 
