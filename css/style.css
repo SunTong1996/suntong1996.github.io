@@ -1543,3 +1543,145 @@ footer {
         height: 80px;
     }
 } 
+
+/* ===== 2026 UI 升级与多页面布局 ===== */
+.home-header {
+    min-height: 72vh;
+    display: flex;
+    align-items: center;
+}
+
+.sub-header {
+    padding: 64px 0 42px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+    color: #fff;
+}
+
+.glass-panel {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 44px 36px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    backdrop-filter: blur(8px);
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.2);
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+}
+
+.hero-lead {
+    font-size: 1.2rem;
+    opacity: 0.92;
+}
+
+.hero-subtitle {
+    margin: 12px 0 20px;
+    font-size: 1.05rem;
+    opacity: 0.9;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 11px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: #fff;
+    color: var(--primary-dark);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.page-nav {
+    flex-wrap: wrap;
+}
+
+.stats-grid,
+.split-grid,
+.cards-two-cols {
+    display: grid;
+    gap: 18px;
+}
+
+.stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.split-grid {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.cards-two-cols {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.stat-card,
+.page-card,
+.content-card {
+    border-radius: 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+    padding: 24px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.page-card {
+    color: inherit;
+}
+
+.page-card i {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.stat-card:hover,
+.page-card:hover,
+.content-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+footer {
+    padding: 26px 0;
+    text-align: center;
+    background: var(--nav-bg);
+    color: #fff;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .glass-panel {
+        padding: 30px 20px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+}
