@@ -29,10 +29,12 @@ window.addEventListener('scroll', () => {
     
     // 显示或隐藏返回顶部按钮
     const backToTopButton = document.getElementById('back-to-top');
-    if (window.scrollY > 300) {
-        backToTopButton.classList.add('show');
-    } else {
-        backToTopButton.classList.remove('show');
+    if (backToTopButton) {
+        if (window.scrollY > 300) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
     }
 });
 
@@ -62,32 +64,37 @@ function highlightCurrentSection() {
 }
 
 // 返回顶部按钮功能
-document.getElementById('back-to-top').addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+const backToTopGlobal = document.getElementById('back-to-top');
+if (backToTopGlobal) {
+    backToTopGlobal.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
-});
+}
 
 // 暗黑模式切换
-const themeToggle = document.getElementById('theme-toggle');
+const themeToggle = document.getElementById('theme-toggle') || document.getElementById('checkbox');
 const htmlElement = document.documentElement;
 
 // 检查本地存储中的主题设置
-if (localStorage.getItem('theme') === 'dark') {
+if (themeToggle && localStorage.getItem('theme') === 'dark') {
     htmlElement.setAttribute('data-theme', 'dark');
     themeToggle.checked = true;
 }
 
-themeToggle.addEventListener('change', function() {
-    if (this.checked) {
-        htmlElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        htmlElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-    }
-});
+if (themeToggle) {
+    themeToggle.addEventListener('change', function() {
+        if (this.checked) {
+            htmlElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            htmlElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+}
 
 // 打字效果函数
 function typeWriter(element, text, speed = 100) {
@@ -133,7 +140,7 @@ let skillsAnimated = false;
 window.addEventListener('scroll', () => {
     if (!skillsAnimated) {
         const skillsSection = document.getElementById('skills');
-        if (isInViewport(skillsSection)) {
+        if (skillsSection && isInViewport(skillsSection)) {
             animateSkillBars();
             skillsAnimated = true;
         }
@@ -151,8 +158,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // 导航平滑滚动
     document.querySelectorAll('nav a, .footer-nav a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
+            if (!targetId || !targetId.startsWith('#')) {
+                return;
+            }
+            e.preventDefault();
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
@@ -198,25 +208,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 暗黑模式切换
-    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggle = document.getElementById('theme-toggle') || document.getElementById('checkbox');
     const htmlElement = document.documentElement;
     
     // 从本地存储中获取主题设置
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         htmlElement.setAttribute('data-theme', savedTheme);
-        themeToggle.checked = savedTheme === 'dark';
+        if (themeToggle) themeToggle.checked = savedTheme === 'dark';
     }
     
-    themeToggle.addEventListener('change', function() {
-        if (this.checked) {
-            htmlElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            htmlElement.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light');
-        }
-    });
+    if (themeToggle) {
+        themeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                htmlElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                htmlElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    }
 
     // 高亮当前活动的导航链接
     function highlightCurrentSection() {
