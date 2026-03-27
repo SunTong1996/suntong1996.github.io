@@ -1,0 +1,12 @@
+{
+  "generated_at_utc": null,
+  "record_count": 0,
+  "records": [],
+  "errors": [
+    {
+      "provider": "system",
+      "url": "",
+      "error": "Bootstrap placeholder. Run scraper to populate real data."
+    }
+  ]
+}
