@@ -45,3 +45,31 @@
 - `index.html` - 更新个人信息、技能、项目等内容
 - `css/style.css` - 自定义颜色、布局和其他样式
 - 添加你自己的照片和项目图片
+
+## GPT聊天记录分析工具
+
+仓库新增了一个可直接运行的命令行工具：`tools/gpt_export_analyzer.py`，可分析 ChatGPT 导出的 `conversations.json` 文件并输出统计报告。
+
+### 功能
+
+- 统计会话总数、消息总数、字符数、时间范围
+- 统计角色分布（user/assistant/system 等）
+- 统计模型分布（如 `gpt-4o`）
+- 提取用户消息高频关键词
+- 统计每日活跃度
+- 输出消息数最多的会话排行
+
+### 使用方式
+
+```bash
+python3 tools/gpt_export_analyzer.py /path/to/conversations.json
+```
+
+可选参数：
+
+```bash
+python3 tools/gpt_export_analyzer.py /path/to/conversations.json \
+  --top-n 20 \
+  --output-json report.json \
+  --output-md report.md
+```
